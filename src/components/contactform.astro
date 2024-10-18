@@ -82,6 +82,12 @@ import Button from "./ui/button.astro";
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    try {
+      fbq('track', 'Contact');
+    }catch {
+      console.log(`track failed`);
+    }
     form.classList.add("was-validated");
     if (!form.checkValidity()) {
       form.querySelectorAll(":invalid")[0].focus();

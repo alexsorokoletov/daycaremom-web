@@ -11,6 +11,19 @@ import Link from "./ui/link.astro";
     Get expert-backed strategies and practical tips to create stress-free routines and handle challenges with ease.
   </p>
   <div class="flex mt-5">
-    <Link href="https://your.daycare.mom/stress-free-potty-guide" target="_blank" style="cta">Get Started</Link>
+    <Link href="https://your.daycare.mom/stress-free-potty-guide" target="_blank" style="cta" class="second-cta-button">Get Started</Link>
   </div>
 </div>
+
+
+<script>
+  const button = document.querySelector(".second-cta-button");
+  button?.addEventListener("click", () => {
+    try {      
+      fbq("track", "ViewContent");
+    } catch {
+      console.log("track failed");
+    }
+    return true;
+  });
+</script>
