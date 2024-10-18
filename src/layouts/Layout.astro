@@ -2,7 +2,8 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource-variable/inter/index.css";
+// import "@fontsource-variable/inter/index.css";
+import "@fontsource-variable/lora/index.css";
 import '@fontsource-variable/bricolage-grotesque';
 
 
@@ -21,8 +22,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Your Daycare Mom"
+  : "Maria - your Daycare Mom";
 ---
 
 <!DOCTYPE html>
@@ -36,22 +37,20 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="My name is Maria, and I run a daycare with over 10 years of experience working with babies, toddlers, and kids. I’m passionate about helping parents make life with children easier and more stress-free. Using my knowledge, I share practical advice that makes parenting more enjoyable."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Maria - your Daycare Mom`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Maria - your Daycare Mom",
         },
       }}
     />
@@ -65,6 +64,9 @@ const makeTitle = title
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
+      }
+      body {
+        background: rgb(255, 246, 239)
       }
     </style>
   </body>

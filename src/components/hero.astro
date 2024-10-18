@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/maria-hero.webp";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -20,25 +20,27 @@ import { Icon } from "astro-icon/components";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      Welcome
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
-      create any website with this starter.
+      My name is <strong>Maria</strong>, and I run a daycare with over 10 years of experience working with babies, toddlers, and kids.
+      <wbr /> I’m passionate about helping parents make life with children easier and more stress-free.
+      <wbr />
+      <wbr />
+      Using my knowledge, I share practical advice that makes parenting more enjoyable.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        href="https://your.daycare.mom/stress-free-potty-guide"
         target="_blank"
         class="flex gap-1 items-center justify-center"
+        style="cta"
         rel="noopener">
         <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
 
-         Download for Free
+         Get your stress-free potty guide
       </Link>
-      <Link
+      <!-- <Link
         size="lg"
         style="outline"
         rel="noopener"
@@ -47,7 +49,7 @@ import { Icon } from "astro-icon/components";
         target="_blank">
         <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
          GitHub Repo
-      </Link>
+      </Link> -->
     </div>
   </div>
 </main>
