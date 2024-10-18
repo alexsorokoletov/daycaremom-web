@@ -1,5 +1,6 @@
 ---
 import Link from "./ui/link.astro";
+import mixpanel from "../utils/mixpanel";
 ---
 
 <div
@@ -23,6 +24,11 @@ import Link from "./ui/link.astro";
       fbq("track", "ViewContent");
     } catch {
       console.log("track failed");
+    }
+    try {
+      mixpanel.track("Click", { Destination: "potty-guide2" });
+    } catch {
+      console.log("track mix failed");
     }
     return true;
   });

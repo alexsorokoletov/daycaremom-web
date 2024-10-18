@@ -1,5 +1,6 @@
 ---
 import Button from "./ui/button.astro";
+import mixpanel from "@utils/mixpanel";
 ---
 
 <!-- To make this contact form work, create your free access key from https://web3forms.com/
@@ -76,23 +77,33 @@ import Button from "./ui/button.astro";
   }
 </style>
 
-<script is:inline>
+<script>
+  import mixpanel from "@utils/mixpanel";
+
   const form = document.getElementById("form");
   const result = document.getElementById("result");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    try {
-      fbq('track', 'Contact');
-    }catch {
-      console.log(`track failed`);
-    }
+    
     form.classList.add("was-validated");
     if (!form.checkValidity()) {
       form.querySelectorAll(":invalid")[0].focus();
       return;
     }
+
+    try {
+      fbq('track', 'Contact');
+    }catch {
+      console.log(`track failed`);
+    }
+    try {
+      mixpanel.track('Contact');
+    }catch {
+      console.log(`track mix failed`);
+    }
+    
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

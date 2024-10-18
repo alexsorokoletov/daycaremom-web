@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/maria-welcome.webp";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
+import mixpanel from "../utils/mixpanel";
 ---
 
 <main
@@ -56,12 +57,19 @@ import { Icon } from "astro-icon/components";
 </main>
 
 <script>
+  import mixpanel from "@utils/mixpanel";
+
   const button = document.querySelector(".hero-cta-button");
   button?.addEventListener("click", () => {
     try {
       fbq("track", "ViewContent");
     } catch {
       console.log("track failed");
+    }
+    try {
+      mixpanel.track("Click", { Destination: "potty-guide" });
+    } catch {
+      console.log("track mix failed");
     }
     return true;
   });
