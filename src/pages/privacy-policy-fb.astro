@@ -1,0 +1,131 @@
+---
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="Privacy policy">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Privacy Policy</Fragment>
+    </Sectionhead>
+
+    <div class="min-h-[calc(100vh-16rem)] flex items-center justify-center">
+      <div class="mt-16">
+        <h2 class="text-xl font-semibold mt-6 mb-2">Information We Collect</h2>
+        <p class="mb-4">
+          We collect personal information you provide directly, such as:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li>Name</li>
+          <li>Email address</li>
+        </ul>
+        <p class="mb-4">
+          This information is collected when you fill out our contact form,
+          submit information through Meta Instant Forms, or interact with our
+          website.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">
+          How We Use Your Information
+        </h2>
+        <p class="mb-4">
+          We use your personal information for the following purposes:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li>To respond to your inquiries submitted via our contact form.</li>
+          <li>
+            To send you email communications related to your request, which you
+            can unsubscribe from at any time.
+          </li>
+          <li>
+            To manage our marketing efforts, including through Meta's Instant
+            Forms.
+          </li>
+          <li>
+            To analyze website usage and improve our services using tools like
+            Mixpanel and Meta Pixel.
+          </li>
+        </ul>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">
+          Analytics and Tracking Tools
+        </h2>
+        <p class="mb-4">
+          We use the following third-party tools to collect information about
+          how you use our website:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li>
+            <strong>Mixpanel</strong>: Tracks website usage, user behavior, and
+            interactions. Mixpanel collects data such as IP address, browser
+            type, and usage patterns. You can review Mixpanel's privacy policy
+            on their website.
+          </li>
+          <li>
+            <strong>Meta Pixel</strong>: Collects data on website visits and
+            user interactions for analytics and advertising purposes. This helps
+            us serve targeted ads via Facebook/Meta platforms. Meta's privacy
+            policy governs how they handle your data.
+          </li>
+        </ul>
+        <p class="mb-4">
+          We may also run Facebook ads and collect information through Meta
+          Instant Forms. When you submit information through these services,
+          their respective privacy policies also apply.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">Email Communication</h2>
+        <p class="mb-4">
+          If you submit your email via our contact form, you may receive
+          follow-up emails. These emails will contain relevant information, and
+          you may opt out of these communications at any time by following the
+          unsubscribe link in any email.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">Data Retention</h2>
+        <p class="mb-4">
+          We retain your personal information for as long as necessary to
+          fulfill the purposes described above, unless a longer retention period
+          is required or permitted by law.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">Data Security</h2>
+        <p class="mb-4">
+          We take reasonable measures to protect the information you provide,
+          but please understand that no system is completely secure. We cannot
+          guarantee the absolute security of your data.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">Your Rights</h2>
+        <ul class="list-disc list-inside mb-4">
+          <li>
+            Opt out of receiving further emails by clicking the unsubscribe
+            link.
+          </li>
+          <li>
+            Request access to, correction of, or deletion of your personal
+            information.
+          </li>
+          <li>
+            Disable tracking via Mixpanel and Meta Pixel by using browser
+            privacy settings or available opt-out mechanisms.
+          </li>
+        </ul>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">Changes to this Policy</h2>
+        <p class="mb-4">
+          We may update this privacy policy from time to time. Any changes will
+          be posted on this page with an updated revision date.
+        </p>
+
+        <h2 class="text-xl font-semibold mt-6 mb-2">Contact Us</h2>
+        <p class="mb-4">
+          If you have any questions or concerns about this privacy policy,
+          please <a class="underline" href="/contact/">contact us</a>.
+        </p>
+        <p class="mb-4">This policy is effective as of Oct 18, 2024.</p>
+      </div>
+    </div>
+  </Container>
+</Layout>
