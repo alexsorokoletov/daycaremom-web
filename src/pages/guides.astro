@@ -1,0 +1,40 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import GuideButton from "@components/guidebutton.astro";
+
+const pricing = [
+  {
+    name: "Stress-free Potty Guide",
+    popular: true,
+    description: "Quick-start guide for stress-free potty training",
+    button: {
+      link: "https://your.daycare.mom/stress-free-potty-guide",
+    },
+  },
+  {
+    name: "Tame the tantrums!",
+    popular: true,
+    description: "Quick-start guide for stress-free potty training",
+    button: {
+      link: "https://your.daycare.mom/tantrum-guide",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">My quick guides</Fragment>
+      <Fragment slot="desc">
+        To bring your parenting one level up and your stress one level down
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <GuideButton guide={item} />)}      
+    </div>
+  </Container>
+</Layout>

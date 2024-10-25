@@ -33,7 +33,7 @@ import mixpanel from "../utils/mixpanel";
       Using my knowledge, I share practical advice that makes parenting more enjoyable.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
+      <!-- <Link
         href="https://your.daycare.mom/stress-free-potty-guide"
         target="_blank"
         class="flex gap-1 items-center justify-center hero-cta-button"
@@ -41,17 +41,24 @@ import mixpanel from "../utils/mixpanel";
         <Icon class="text-white w-5 h-5" name="bx:bxs-book-heart" />
 
         Get your stress-free potty guide
-      </Link>
-      <!-- <Link
+      </Link> -->
+      <Link
+      href="https://your.daycare.mom/tantrum-guide"
+      target="_blank"
+      class="flex gap-1 items-center justify-center hero-cta-button"
+      style="cta">
+      <Icon class="text-white w-5 h-5" name="bx:bxs-book-heart" />
+      Stress-Free Tantrum Tips That Work
+    </Link>
+      <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-         GitHub Repo
-      </Link> -->
+        href="/guides"
+        class="flex gap-1 items-center justify-center guides-cta-button">
+        <Icon class="text-black w-4 h-4" name="bx:bookmarks" />
+         My other guides
+      </Link>
     </div>
   </div>
 </main>
@@ -67,7 +74,7 @@ import mixpanel from "../utils/mixpanel";
       console.log("track failed");
     }
     try {
-      mixpanel.track("Click", { Destination: "potty-guide" });
+      mixpanel.track("Click", { Destination: "tantrum-guide" });
     } catch {
       console.log("track mix failed");
     }
